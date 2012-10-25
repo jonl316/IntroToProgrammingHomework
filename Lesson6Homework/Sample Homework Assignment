@@ -1,0 +1,280 @@
+Sample Homework Assignment
+Consider the following computer programming exercise:
+
+We wish to determine if someone is eligible to vote as a resident of one of several countries. This depends on the country itself and the age of the resident. The "rules" are:
+
+    If someone lives in the USA, they can vote if they are 18 or older
+    If someone lives in Canada, they can vote if they are 21 or older
+    If someone lives in Mexico, they can vote if they are 26 or older
+    Any other country or age cannot vote
+
+So, we need a program to take the age and country and simply display the voting status, then stop.
+
+
+Solution
+
+1) The IPO for this program is:
+
+Input:
+country
+age
+
+Processing:
+none
+
+Output:
+votingStatus
+
+Algorithm
+1) enter the country and age
+2) set voting status to 'N'  as a default
+3) use some IF statements for the voting logic, if any case is true set voting status to 'Y'
+     if country = U
+         if age > 17
+             votingStatus = Y
+         end if
+     else
+           if country =C
+               if age > 20
+                   votingStatus = Y
+               end if
+           else
+                if country = M
+                    if age > 25
+                        votingStatus = Y
+                    end if
+           end if
+      end if
+
+ 4) if votingStatus = Y
+         display "can vote"
+     else
+         display " can't vote"
+     end if
+ end
+
+
+Notes:
+
+* Observe that we NEVER place correct syntax in the Algorithm - we don't care about those details yet.
+* There are no "==" or quotes or semicolons - this doesn't matter, it's about getting the logic right at this point.
+* The use of end if can make it easier to note where ifs start and stop, and spacing them over can also make things easier to see. In C++, though, it's all about getting the braces { and } in the right place. The compiler IGNORES spaces, so even though you should make it look nice for reading how you space over has no effect on the logical order.
+* We have decided to use single characters for the country, rather than a full name. That is fine. We also make them capitals only for this program.
+* There are several ways to use lower case also (i.e.  'U' or 'u' for USA), see if you recall "toupper" from your book.
+* Some people think more graphically and prefer flowchart diagrams for if/else statements, and there are some shown in your book. If that makes more sense to you, feel free to use them.
+
+
+2) The C++ code is:
+      
+//Voting Program
+// Intro C++, Lesson 6
+// Written by Bill H, Jan 2012
+
+#include <iostream>
+using namespace std;
+
+int main( )
+{
+    //Declare variables and constants
+    char country = ' ';
+    int age = 0;
+    char votingStatus = ' ';
+   
+    //Prompt the user for inputs
+    cout << "Enter first letter of country: ";
+    cin >> country;
+    cout << "Enter age: ";
+    cin >> age;
+
+    //Decide voting status
+    votingStatus = 'N';
+    if (country == 'U')
+       {
+         if (age > 17)
+            votingStatus = 'Y';
+        }
+    else
+        if (country =='C')
+        {
+            if (age > 20)
+             votingStatus = 'Y';
+        }
+       else
+          if (country == 'M')
+          {
+            if (age > 25)
+             votingStatus = 'Y';
+          }
+
+    //Display the result
+   if (votingStatus == 'Y')
+        cout << "This person CAN vote." <<endl;
+  else
+    cout << "This person CANNOT vote." <<endl;
+
+    system("pause");
+    return 0;
+} //end of main
+
+
+Another Sample Problem
+
+Imagine we are buying a car and the purchase price has to be determined from a base amount and some options. We would enter the base, then add costs based on the following tables:
+
+Engine
+Additional Cost
+4 cylinder
+$0
+6 cylinder
+$575
+Diesel
+$950
+
+
+Trim Level
+Additional Cost
+Basic
+$0
+Standard
+$1200
+Fancy
+$2500
+
+Radio
+Additional Cost
+None
+$0
+AM/FM
+$250
+AM/FM + CD
+$450
+
+
+Each one would need an input code, then we could determine the purchase price and display it, then stop.
+
+
+Solution
+
+1) The IPO for this program is:
+
+Input:
+basePrice
+engineCode
+trimCode
+radioCode
+
+Processing:
+enginePrice
+trimPrice
+radioPrice
+
+Output:
+purchasePrice
+
+Algorithm
+1) enter the basePrice and all codes
+2) use some IF statements for the price logic
+     if engineCode = 4
+          enginePrice = 0
+      else
+            if engineCode  = 6
+                  enginePrice = 575
+            else
+                  enginePrice = 950
+            end if
+     end if
+    
+     if trimCode = B
+          trimPrice = 0
+     else
+           if trimCode = S
+               trimPrice = 1200
+          else
+               trimPrice = 2500
+          end if        
+     end if
+  
+     if radioCode = N
+          radioPrice = 0
+     else
+           if radioCode = A
+                radioPrice = 250
+           else
+                radioPrice = 450
+         end if
+     end if
+3) purchasePrice = basePrice + enginePrice + trimPrice + radioPrice
+4) display purchasePrice
+ end
+
+
+2) The C++ code is:
+   
+    
+//Car Sales Program
+// Intro C++, Lesson 6
+// Written by Bill H, Jan 2012
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main( )
+{
+  //Declare variables and constants
+  double basePrice = 0.0;
+  char engineCode = ' ';
+  char trimCode = ' ';
+  char radioCode = ' ' ;
+  double enginePrice = 0.0;
+  double trimPrice = 0.0;
+  double radioPrice = 0.0;
+  double purchasePrice = 0.0;
+   
+  //Prompt the user for inputs
+  cout << "Enter the base price of the car: $";
+  cin >> basePrice;
+  cout << "Enter engine code (4,6,D): ";
+  cin >> engineCode;
+  cout << "Enter trim code (B,S,F): ";
+  cin >> trimCode;
+  cout << "Enter radio code (N,A,C): ";
+  cin >> radioCode;
+ 
+  //Decide on the costs
+  if (engineCode == '4')
+          enginePrice = 0.0;    
+  else
+        if (engineCode == '6')
+             enginePrice = 575.0;
+        else
+            enginePrice =  950.0;
+
+  if (trimCode == 'B')
+          trimPrice = 0.0;   
+  else
+        if (trimCode == 'S')
+             trimPrice = 1200.0;
+        else
+            trimPrice =  2500.0;
+
+  if (radioCode == 'N')
+          trimPrice = 0.0;  
+  else
+        if (radioCode == 'A')
+            radioPrice = 250.0;
+        else
+            radioPrice =  450.0;
+ 
+ //Total it all up..
+ purchasePrice = basePrice + enginePrice + trimPrice + radioPrice;
+ 
+ //Display the result
+ cout << fixed << setprecision(2); 
+ cout << "The final car purchase price is: $" << purchasePrice <<endl;
+
+ system("pause");
+ return 0;
+} //end of main 
+
+ This is the End of the Sample Homework Assignment

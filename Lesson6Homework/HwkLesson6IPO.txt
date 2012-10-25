@@ -1,0 +1,44 @@
+Jonathan David Livesay
+Intro to Programming - C++
+Homework Assignment  - Lesson 6
+10/08/2012
+
+
+1) Program to calculate raises for employees based on their current salary. 
+
+Input:
+oldSalary
+
+Processing:
+
+Output:
+raiseAmount
+newSalary
+
+Algorithm:
+1. Enter the employees oldSalary
+2. Use some IF statements to calculate Raise based on oldSalary
+	if oldSalary <= 14999.99
+		raiseAmount = oldSalary * .05
+	else if oldSalary <= 49999.99
+		raiseAmount = oldSalary * .07
+	else if oldSalary <= 99999.99
+		raiseAmount = oldSalary * .10
+	else oldSalary >= 100000.00
+		raiseAmount = oldSalary * .15
+	end if 
+3. Calculate newSalary = raiseAmount + oldSalary
+4. Display the raiseAmount to the screen 
+5. Display the newSalary amount to the screen 
+END
+
+
+
+
+Desk Check
+
+currentSalary		Percentage Used		raiseAmount		salaryAfterRaise
+125638.12 			.15					18845.72 		144483.84
+35200.00			.07					2464.00			37664.00
+12500.00			.05					625.00			13125.00
+62450.00			.10 				6245.00			68695.00

@@ -1,0 +1,39 @@
+Jonathan David Livesay
+Intro to Programming - C++
+Homework Assignment  - Lesson 8
+10/15/2012
+
+Input:
+factorialNumber
+
+Processing Items:
+counter
+
+Output:
+factorialResult
+
+Algorithm:
+1. Prompt the user to enter the factorialNumber making sure they enter a number between 2 and 60
+2. if the user entered a number less than 2 or greater than 60
+   display a message on screen that says please enter a number between 2 and 60
+   end the program
+   else
+      While counter < factorialNumber
+         factorialResult = factorialResult * counter
+         counter++
+   end while
+   display the factorialResult to the screen
+   end if
+END
+
+
+Desk Check
+factorialNumber   IF True or False     counter      factorialResult
+5                 False                0            0.0
+                                       1            1.0
+                                       2            2.0
+                                       3            6.0
+                                       4            24.0
+                                       5            120.0
+
+ 

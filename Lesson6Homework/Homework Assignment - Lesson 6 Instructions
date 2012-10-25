@@ -1,0 +1,152 @@
+Homework Assignment - Lesson 6 Instructions
+Objective: 
+
+Develop a program with selection structure constructs in C++ programming.
+
+
+Assignment:
+
+1) Consider the following computer programming problem:
+
+Hammerschlag Corp needs a program to help compute raises for their employees. When the program begins, the user will be prompted to enter a current salary. T,hen a raise will be computed according to the following table:
+
+Old Salary
+Raise
+up to $14,999.99	5%
+$15,000.00 to $49,999.99	7%
+$50,000.00 to $99,999.99	10%
+$100,000.00 and higher	  15%
+After the raise is determined, it will be added to the current salary to give the new salary. There will be 2 outputs - the raise and the new salary, then the program will stop.
+
+For example, if a current salary of $35200.00 were entered, the program would display:  You will receive a raise of $2464.00, for a new yearly salary of $37664.00 .(You can use this for test data.)
+
+Notes:
+
+    * Money data input and output should handle/show decimals.  Show a dollar sign on the input prompt, and on the output - along with 2 decimal places only.
+    * Use no "commas" for larger numbers though. (i.e. $123456.00  not $123,456.00)
+    * Remember that dollar signs are for display only - you CANNOT use dollar signs inside IF statements!
+    * Don't worry about rounding, ignore that.
+    * Obviously, you need to use a series of  IF  statements to process the raise.
+        * There are 2 ways to do that - either a series of several separate IF statements each using a logic function (AND, or && in C++)
+            OR
+        * You may nest the IF statements, in which case you do not need, and may not use any logic functions.
+        * Pick ONE of these and do it, if you mix nesting with logic you will overcomplicate the problem and will lose points.
+    * Your Instructor will not test your program with any inputs other than numeric values, so no error checking at all is needed - and none is allowed.
+    * Do not declare any constants in the program - they are not needed.
+    * Remember good coding standards - appropriate variable names and good comments, and an easy to read (well-spaced) program..
+
+
+2) Write up an IPO chart for this problem. Be sure to have an "Input, Processing, Output and Algorithm" part.
+
+3) Desk-check your solution. 
+
+The following grading standard will be used for your IPO chart:
+
+Requirement
+Max Points
+Input section present and correct	  3
+Processing section present and correct
+ 2
+Output section present and correct	  3
+Good choices of variable names
+2
+Algorithm complete and correct
+15
+Total	 25
+  
+
+4) Make a folder on your computer called Lesson6Homework.
+  
+5) Type up your IPO in a word processor for submission. Use the following format:
+
+    (At the top of the page)
+    Your name (and your partners' name, if you have one)
+    Intro to Programming - C++
+    Homework Assignment  - Lesson 6
+    Today’s date
+
+    (Then skip 2 lines)
+
+        Input..
+
+        Processing..
+
+        Output..
+
+        Algorithm..
+
+        One under the other.
+
+6) Save your work in a file called HwkLesson6IPO in the Lesson6Homework folder
+
+7) Create a new project in Visual C++ Express. Call it salaryProject and place it in the Lesson6Homework folder. 
+
+8) Click Project then Add New Item to make the area where you can enter the C++ code.
+        * Call the C++ program HwkLesson6Code - that is, you are creating a new file called HwkLesson6Code.cpp
+        * Be sure you include your name (and your partners' name) in a comment block at the top
+   
+9) Using the IPO as a guide, as before, develop and enter the C++ program. Be sure to save all when you are complete.
+
+10) Compile your program. Correct any errors until the compile is successful.
+
+11)  Execute your program and test it to be sure it works and produces the correct result.
+
+The following grading standard will be used for your C++ program:
+
+Item
+Result
+Program partially written (incomplete)
+ 5 points total credit, maximum
+Program written but does not compile
+7 points total credit, maximum
+Program executes with output errors (i.e produces no answer or wrong answer)	 10 points total credit maximum
+
+
+Program executes with correct output
+15 points + credit below
+Good comments added
+5 points
+Program is easy to read and follow, good spacing and style (IF statements nested)
+5 points
+Total credit maximum possible if your program executes with correct output
+25 points
+
+
+Completion and Submission:
+
+1) If you are working with a partner, you EACH need to do this - not just ONE of you.
+
+2) Submit BOTH your HwkLesson6IPO and HwkLesson6Code.cpp files to be graded. Use this process:
+
+    1) Click the Assignments button.
+    2) Click the link for Homework Assignment - Lesson 6 .
+    3) Scroll down below the end of these instructions.
+    4) Find and click the Homework Assignment  - Lesson 6 link. (look for the message "this is where you submit" to help you find it.)
+    5) You will see a Preview Upload Assignment screen
+    6) Scroll down to 2. Assignment Materials .
+    7) Scroll below the Submission area (large text box).
+    8) Find the Attach File area.
+    9) Click on the Browse My Computer button.
+    10)  A Choose file to upload dialog box will pop up.
+    11)  Browse to find your IPO file and highlight it. 
+    12)  Click Open .
+    13) You will now see your file appear in the Attached Files area.
+    14) Click on the Browse My Computer button again.
+    15)  A Choose file to upload dialog box will pop up again.
+    16)  Browse to find your .cpp file and highlight it. 
+    17)  Click Open .
+    18) You will now see your other file appear in the Attached Files area.
+    19) Scroll all the way down to the bottom  of the window, click Submit in the right corner.
+    20) When you see the Review Submission History screen pop up, click on OK.
+         * (If you made an error, you can click on Start New Submission and try again).
+  
+    Your files will now be sent in for grading. Your Instructor will review your IPO and download/execute the .cpp program. 
+
+3) Check the gradebook a few days after posting for your score and comments from your Instructor, if any.   
+    * If you submit early, you may not see a grade until shortly after the due date so please be patient.
+    * You may get a returned file of your IPO with comments if needed.
+    * Comments about just your code will be included with your grade in the gradebook as well.
+    * Most students get both of the above, expect that unless you got a very high score.
+    * A partial solution to this assignment (IPO only) will be provided after the deadline has passed.
+
+This is the End of Homework Assignment - Lesson 6
