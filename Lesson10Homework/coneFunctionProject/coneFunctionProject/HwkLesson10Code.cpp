@@ -5,6 +5,9 @@
 #include <iostream>
 using namespace std;
 
+// function prototype
+double coneCalc(double pi, double coneRadius, double coneHeight);
+
 int main( )
 {
     //Declare variables and constants
@@ -20,7 +23,7 @@ int main( )
     cin >> coneHeight;
 
     //Do the calculation
-    coneVolume = 0.33 * PI * coneRadius * coneRadius * coneHeight;
+	coneVolume = coneCalc(PI, coneRadius, coneHeight);
 
     //Display the result
     cout << "The volume of your cone is: " << coneVolume << endl;
@@ -28,3 +31,10 @@ int main( )
     system("pause");
     return 0;
 } //end of main
+
+double coneCalc(double pi, double coneRadius, double coneHeight)
+{
+	double coneVolume;
+	coneVolume = 0.33 * pi * coneRadius * coneRadius * coneHeight;
+	return coneVolume;
+}
