@@ -20,14 +20,14 @@ int main()
 
 	// If statement to test if the factorialNumber is between 2 and 60
 	if (factorialNumber < 2 || factorialNumber > 60)
-		cout << "You must enter a number between 2 and 60" << endl;
+		cout << "Please enter a number between 2 and 60" << endl;
 	else
 	{
 		// While loop
 		while (counter < factorialNumber)
 		{
 			factorialResult += factorialResult * counter;
-			counter++;
+			counter += 1;
 		}// end while
 		cout << "The factorial of " << factorialNumber << " is " << factorialResult << endl;
 	}// end if

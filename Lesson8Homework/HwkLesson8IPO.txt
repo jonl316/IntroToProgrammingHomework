@@ -16,11 +16,10 @@ Algorithm:
 1. Prompt the user to enter the factorialNumber making sure they enter a number between 2 and 60
 2. if the user entered a number less than 2 or greater than 60
    display a message on screen that says please enter a number between 2 and 60
-   end the program
    else
-      While counter < factorialNumber
+      Repeat while counter < factorialNumber
          factorialResult = factorialResult * counter
-         counter++
+         counter += 1
    end while
    display the factorialResult to the screen
    end if
