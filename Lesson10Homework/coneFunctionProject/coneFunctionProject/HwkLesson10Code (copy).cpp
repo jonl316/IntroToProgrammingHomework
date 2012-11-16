@@ -6,13 +6,14 @@
 using namespace std;
 
 // function prototype
-double getConeCalc(double funcConeRadius, double funcConeHeight);
+double coneCalc(double pi, double coneRadius, double coneHeight);
 
 int main( )
 {
     //Declare variables and constants
     double coneRadius = 0.0;
     double coneHeight = 0.0;
+    const double PI = 3.14;
     double coneVolume = 0.0;
 
     //Prompt the user for inputs
@@ -22,18 +23,18 @@ int main( )
     cin >> coneHeight;
 
     //Do the calculation
-	coneVolume = getConeCalc(coneRadius, coneHeight);
+	coneVolume = coneCalc(PI, coneRadius, coneHeight);
 
     //Display the result
     cout << "The volume of your cone is: " << coneVolume << endl;
 
-    // system("pause");
+    system("pause");
     return 0;
 } //end of main
 
-double getConeCalc(double funcConeRadius, double funcConeHeight)
+double coneCalc(double pi, double coneRadius, double coneHeight)
 {
-	double funcConeVolume;
-	funcConeVolume = 0.33 * 3.14159 * funcConeRadius * funcConeRadius * funcConeHeight;
-	return funcConeVolume;
+	double coneVolume;
+	coneVolume = 0.33 * pi * coneRadius * coneRadius * coneHeight;
+	return coneVolume;
 }
